@@ -1,0 +1,34 @@
+{
+  "name": "notification-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DANKAMN/notification-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DANKAMN/notification-service/issues"
+  },
+  "homepage": "https://github.com/DANKAMN/notification-service#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "bullmq": "^5.58.7",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "ioredis": "^5.7.0",
+    "nodemailer": "^7.0.6",
+    "prisma": "^6.16.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "jest": "^30.1.3",
+    "supertest": "^7.1.4"
+  }
+}
