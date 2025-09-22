@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const messageRoutes = require('./routes/messages');
+const userRoutes = require('./routes/users');
 
 // import our background job
 const startNotificationChecker = require('./jobs/notificationChecker');
@@ -10,6 +11,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/messages', messageRoutes);
+app.use('/users', userRoutes);
 
 const PORT = process.env.PORT || 3000;
 

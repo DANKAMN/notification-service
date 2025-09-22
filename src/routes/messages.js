@@ -65,4 +65,15 @@ router.post('/mark-read', async (req, res) => {
   }
 });
 
+// GET /messages/:userId -> fetch all messages for a user
+router.get('/:userId', async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const messages = await Message.find({ recipient: userId }).populate('sender', 'name email');
+    res.json(messages);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;
